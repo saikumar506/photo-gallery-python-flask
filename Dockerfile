@@ -1,13 +1,11 @@
 FROM python:3.12
 
-WORKDIR /app
+WORKDIR /opt/app
 
-COPY . /app
+COPY . /opt/app
 
 RUN pip install -r requirements.txt
 
-COPY . /app
-
 EXPOSE 5000
 
-CMD ["python", "main.py"]  
+CMD ["python3", "main.py"]  
